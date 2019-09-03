@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92B92639231E4631007EE26D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B92638231E4631007EE26D /* AppDelegate.swift */; };
+		92B9263B231E4631007EE26D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9263A231E4631007EE26D /* ViewController.swift */; };
+		92B9263E231E4631007EE26D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B9263C231E4631007EE26D /* Main.storyboard */; };
+		92B92640231E4632007EE26D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92B9263F231E4632007EE26D /* Assets.xcassets */; };
+		92B92643231E4632007EE26D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B92641231E4632007EE26D /* LaunchScreen.storyboard */; };
+		92B9264E231E4632007EE26D /* GeoHashingOnMapKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9264D231E4632007EE26D /* GeoHashingOnMapKitTests.swift */; };
+		92B92659231E4632007EE26D /* GeoHashingOnMapKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B92658231E4632007EE26D /* GeoHashingOnMapKitUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92B9264A231E4632007EE26D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92B9262D231E4631007EE26D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92B92634231E4631007EE26D;
+			remoteInfo = GeoHashingOnMapKit;
+		};
+		92B92655231E4632007EE26D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92B9262D231E4631007EE26D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92B92634231E4631007EE26D;
+			remoteInfo = GeoHashingOnMapKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		92B92635231E4631007EE26D /* GeoHashingOnMapKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoHashingOnMapKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92B92638231E4631007EE26D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		92B9263A231E4631007EE26D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92B9263D231E4631007EE26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92B9263F231E4632007EE26D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92B92642231E4632007EE26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92B92644231E4632007EE26D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92B92649231E4632007EE26D /* GeoHashingOnMapKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoHashingOnMapKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92B9264D231E4632007EE26D /* GeoHashingOnMapKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoHashingOnMapKitTests.swift; sourceTree = "<group>"; };
+		92B9264F231E4632007EE26D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92B92654231E4632007EE26D /* GeoHashingOnMapKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoHashingOnMapKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92B92658231E4632007EE26D /* GeoHashingOnMapKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoHashingOnMapKitUITests.swift; sourceTree = "<group>"; };
+		92B9265A231E4632007EE26D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92B92632231E4631007EE26D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92B92646231E4632007EE26D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92B92651231E4632007EE26D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92B9262C231E4631007EE26D = {
+			isa = PBXGroup;
+			children = (
+				92B92637231E4631007EE26D /* GeoHashingOnMapKit */,
+				92B9264C231E4632007EE26D /* GeoHashingOnMapKitTests */,
+				92B92657231E4632007EE26D /* GeoHashingOnMapKitUITests */,
+				92B92636231E4631007EE26D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92B92636231E4631007EE26D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92B92635231E4631007EE26D /* GeoHashingOnMapKit.app */,
+				92B92649231E4632007EE26D /* GeoHashingOnMapKitTests.xctest */,
+				92B92654231E4632007EE26D /* GeoHashingOnMapKitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92B92637231E4631007EE26D /* GeoHashingOnMapKit */ = {
+			isa = PBXGroup;
+			children = (
+				92B92638231E4631007EE26D /* AppDelegate.swift */,
+				92B9263A231E4631007EE26D /* ViewController.swift */,
+				92B9263C231E4631007EE26D /* Main.storyboard */,
+				92B9263F231E4632007EE26D /* Assets.xcassets */,
+				92B92641231E4632007EE26D /* LaunchScreen.storyboard */,
+				92B92644231E4632007EE26D /* Info.plist */,
+			);
+			path = GeoHashingOnMapKit;
+			sourceTree = "<group>";
+		};
+		92B9264C231E4632007EE26D /* GeoHashingOnMapKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				92B9264D231E4632007EE26D /* GeoHashingOnMapKitTests.swift */,
+				92B9264F231E4632007EE26D /* Info.plist */,
+			);
+			path = GeoHashingOnMapKitTests;
+			sourceTree = "<group>";
+		};
+		92B92657231E4632007EE26D /* GeoHashingOnMapKitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				92B92658231E4632007EE26D /* GeoHashingOnMapKitUITests.swift */,
+				92B9265A231E4632007EE26D /* Info.plist */,
+			);
+			path = GeoHashingOnMapKitUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92B92634231E4631007EE26D /* GeoHashingOnMapKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92B9265D231E4632007EE26D /* Build configuration list for PBXNativeTarget "GeoHashingOnMapKit" */;
+			buildPhases = (
+				92B92631231E4631007EE26D /* Sources */,
+				92B92632231E4631007EE26D /* Frameworks */,
+				92B92633231E4631007EE26D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoHashingOnMapKit;
+			productName = GeoHashingOnMapKit;
+			productReference = 92B92635231E4631007EE26D /* GeoHashingOnMapKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92B92648231E4632007EE26D /* GeoHashingOnMapKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92B92660231E4632007EE26D /* Build configuration list for PBXNativeTarget "GeoHashingOnMapKitTests" */;
+			buildPhases = (
+				92B92645231E4632007EE26D /* Sources */,
+				92B92646231E4632007EE26D /* Frameworks */,
+				92B92647231E4632007EE26D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92B9264B231E4632007EE26D /* PBXTargetDependency */,
+			);
+			name = GeoHashingOnMapKitTests;
+			productName = GeoHashingOnMapKitTests;
+			productReference = 92B92649231E4632007EE26D /* GeoHashingOnMapKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		92B92653231E4632007EE26D /* GeoHashingOnMapKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92B92663231E4632007EE26D /* Build configuration list for PBXNativeTarget "GeoHashingOnMapKitUITests" */;
+			buildPhases = (
+				92B92650231E4632007EE26D /* Sources */,
+				92B92651231E4632007EE26D /* Frameworks */,
+				92B92652231E4632007EE26D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92B92656231E4632007EE26D /* PBXTargetDependency */,
+			);
+			name = GeoHashingOnMapKitUITests;
+			productName = GeoHashingOnMapKitUITests;
+			productReference = 92B92654231E4632007EE26D /* GeoHashingOnMapKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92B9262D231E4631007EE26D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "ogulcan keskin";
+				TargetAttributes = {
+					92B92634231E4631007EE26D = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					92B92648231E4632007EE26D = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 92B92634231E4631007EE26D;
+					};
+					92B92653231E4632007EE26D = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 92B92634231E4631007EE26D;
+					};
+				};
+			};
+			buildConfigurationList = 92B92630231E4631007EE26D /* Build configuration list for PBXProject "GeoHashingOnMapKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92B9262C231E4631007EE26D;
+			productRefGroup = 92B92636231E4631007EE26D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92B92634231E4631007EE26D /* GeoHashingOnMapKit */,
+				92B92648231E4632007EE26D /* GeoHashingOnMapKitTests */,
+				92B92653231E4632007EE26D /* GeoHashingOnMapKitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92B92633231E4631007EE26D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92B92643231E4632007EE26D /* LaunchScreen.storyboard in Resources */,
+				92B92640231E4632007EE26D /* Assets.xcassets in Resources */,
+				92B9263E231E4631007EE26D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92B92647231E4632007EE26D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92B92652231E4632007EE26D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92B92631231E4631007EE26D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92B9263B231E4631007EE26D /* ViewController.swift in Sources */,
+				92B92639231E4631007EE26D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92B92645231E4632007EE26D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92B9264E231E4632007EE26D /* GeoHashingOnMapKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92B92650231E4632007EE26D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92B92659231E4632007EE26D /* GeoHashingOnMapKitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92B9264B231E4632007EE26D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92B92634231E4631007EE26D /* GeoHashingOnMapKit */;
+			targetProxy = 92B9264A231E4632007EE26D /* PBXContainerItemProxy */;
+		};
+		92B92656231E4632007EE26D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92B92634231E4631007EE26D /* GeoHashingOnMapKit */;
+			targetProxy = 92B92655231E4632007EE26D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92B9263C231E4631007EE26D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92B9263D231E4631007EE26D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		92B92641231E4632007EE26D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92B92642231E4632007EE26D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92B9265B231E4632007EE26D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		92B9265C231E4632007EE26D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92B9265E231E4632007EE26D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5GVAEVR7WU;
+				INFOPLIST_FILE = GeoHashingOnMapKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogi.test.GeoHashingOnMapKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92B9265F231E4632007EE26D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5GVAEVR7WU;
+				INFOPLIST_FILE = GeoHashingOnMapKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogi.test.GeoHashingOnMapKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		92B92661231E4632007EE26D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5GVAEVR7WU;
+				INFOPLIST_FILE = GeoHashingOnMapKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogi.test.GeoHashingOnMapKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoHashingOnMapKit.app/GeoHashingOnMapKit";
+			};
+			name = Debug;
+		};
+		92B92662231E4632007EE26D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5GVAEVR7WU;
+				INFOPLIST_FILE = GeoHashingOnMapKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogi.test.GeoHashingOnMapKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoHashingOnMapKit.app/GeoHashingOnMapKit";
+			};
+			name = Release;
+		};
+		92B92664231E4632007EE26D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5GVAEVR7WU;
+				INFOPLIST_FILE = GeoHashingOnMapKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogi.test.GeoHashingOnMapKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GeoHashingOnMapKit;
+			};
+			name = Debug;
+		};
+		92B92665231E4632007EE26D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5GVAEVR7WU;
+				INFOPLIST_FILE = GeoHashingOnMapKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogi.test.GeoHashingOnMapKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GeoHashingOnMapKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92B92630231E4631007EE26D /* Build configuration list for PBXProject "GeoHashingOnMapKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92B9265B231E4632007EE26D /* Debug */,
+				92B9265C231E4632007EE26D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92B9265D231E4632007EE26D /* Build configuration list for PBXNativeTarget "GeoHashingOnMapKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92B9265E231E4632007EE26D /* Debug */,
+				92B9265F231E4632007EE26D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92B92660231E4632007EE26D /* Build configuration list for PBXNativeTarget "GeoHashingOnMapKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92B92661231E4632007EE26D /* Debug */,
+				92B92662231E4632007EE26D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92B92663231E4632007EE26D /* Build configuration list for PBXNativeTarget "GeoHashingOnMapKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92B92664231E4632007EE26D /* Debug */,
+				92B92665231E4632007EE26D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92B9262D231E4631007EE26D /* Project object */;
+}
