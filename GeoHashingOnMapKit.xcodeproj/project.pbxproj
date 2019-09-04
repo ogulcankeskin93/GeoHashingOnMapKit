@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		92B3F1CD231F91C000D042EB /* MarkerMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B3F1CC231F91C000D042EB /* MarkerMapViewModel.swift */; };
 		92B3F1CF231F964C00D042EB /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B3F1CE231F964C00D042EB /* Bindable.swift */; };
+		92B3F1D2231FF79700D042EB /* GeoHashing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B3F1D1231FF79700D042EB /* GeoHashing.swift */; };
 		92B92639231E4631007EE26D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B92638231E4631007EE26D /* AppDelegate.swift */; };
 		92B9263B231E4631007EE26D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9263A231E4631007EE26D /* ViewController.swift */; };
 		92B9263E231E4631007EE26D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B9263C231E4631007EE26D /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		92B3F1CC231F91C000D042EB /* MarkerMapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerMapViewModel.swift; sourceTree = "<group>"; };
 		92B3F1CE231F964C00D042EB /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		92B3F1D1231FF79700D042EB /* GeoHashing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoHashing.swift; sourceTree = "<group>"; };
 		92B92635231E4631007EE26D /* GeoHashingOnMapKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoHashingOnMapKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B92638231E4631007EE26D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92B9263A231E4631007EE26D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92B3F1D0231FF78A00D042EB /* GeoHash */ = {
+			isa = PBXGroup;
+			children = (
+				92B3F1D1231FF79700D042EB /* GeoHashing.swift */,
+			);
+			path = GeoHash;
+			sourceTree = "<group>";
+		};
 		92B9262C231E4631007EE26D = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 		92B92637231E4631007EE26D /* GeoHashingOnMapKit */ = {
 			isa = PBXGroup;
 			children = (
+				92B3F1D0231FF78A00D042EB /* GeoHash */,
 				92B92666231E4A17007EE26D /* Networking */,
 				92B92638231E4631007EE26D /* AppDelegate.swift */,
 				92B9263A231E4631007EE26D /* ViewController.swift */,
@@ -279,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92B3F1D2231FF79700D042EB /* GeoHashing.swift in Sources */,
 				92B9263B231E4631007EE26D /* ViewController.swift in Sources */,
 				92B3F1CF231F964C00D042EB /* Bindable.swift in Sources */,
 				92B9266A231E6888007EE26D /* Request.swift in Sources */,
