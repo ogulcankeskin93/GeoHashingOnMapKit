@@ -23,10 +23,10 @@ class ServiceCore {
     }()
     
     public func fetchResources<T: Decodable>(url: URL, completion: @escaping (Result<T, APIServiceError>) -> Void) {
-        guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
-            completion(.failure(.invalidEndpoint))
-            return
-        }
+//        guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
+//            completion(.failure(.invalidEndpoint))
+//            return
+//        }
 //        let queryItems = [URLQueryItem(name: "api_key", value: apiKey)]
 //        urlComponents.queryItems = queryItems
 //        guard let url = urlComponents.url else {
@@ -44,10 +44,17 @@ class ServiceCore {
                 do {
                     let values = try self.jsonDecoder.decode(T.self, from: data)
                     completion(.success(values))
-                } catch {
+                    
+                }
+                catch let DecodingError.typeMismatch(type, context)  {
+                    print("Type '\(type)' mismatch:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
                     completion(.failure(.decodeError))
                 }
-            case .failure(let error):
+                catch {
+                    completion(.failure(.decodeError))
+                }
+            case .failure(let _):
                 completion(.failure(.apiError))
             }
             }.resume()

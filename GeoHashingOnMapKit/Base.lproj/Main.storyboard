@@ -24,18 +24,35 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="6Mu-Wk-OPW"/>
                                 </connections>
                             </mapView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="EtH-c1-EmU">
+                                <rect key="frame" x="28" y="736" width="358" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Eg-e2-mzm">
+                                <rect key="frame" x="188" y="786" width="38.5" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="8xy-fg-sGb" secondAttribute="bottom" id="1si-Bn-BrJ"/>
+                            <constraint firstItem="3Eg-e2-mzm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DPu-35-5Lk"/>
                             <constraint firstItem="8xy-fg-sGb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EP1-6c-dng"/>
+                            <constraint firstItem="3Eg-e2-mzm" firstAttribute="top" secondItem="EtH-c1-EmU" secondAttribute="bottom" constant="20" id="Gz4-Rc-8s8"/>
+                            <constraint firstItem="EtH-c1-EmU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Mew-ec-zT0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8xy-fg-sGb" secondAttribute="trailing" id="O2o-ao-xmM"/>
                             <constraint firstItem="8xy-fg-sGb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bCT-3x-DDe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EtH-c1-EmU" secondAttribute="trailing" constant="30" id="bFI-Nt-nBv"/>
+                            <constraint firstItem="EtH-c1-EmU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cv3-Tw-1d8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Eg-e2-mzm" secondAttribute="bottom" constant="40" id="vIi-t4-Ksq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="distanceLabel" destination="3Eg-e2-mzm" id="eOu-0a-nXj"/>
                         <outlet property="mapView" destination="8xy-fg-sGb" id="kmK-Wb-zkK"/>
+                        <outlet property="slider" destination="EtH-c1-EmU" id="X4H-AB-CrG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

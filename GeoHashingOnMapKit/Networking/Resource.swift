@@ -9,7 +9,6 @@
 import Foundation
 
 typealias JSONDictionary = [String: AnyObject]
-typealias episodes = (Result<Episode, APIServiceError>) -> ()
 
 public struct Request {
     let url: NSURL
