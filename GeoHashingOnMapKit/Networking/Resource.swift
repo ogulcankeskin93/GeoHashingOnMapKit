@@ -19,12 +19,12 @@ public struct Request {
 
 
 protocol LocationService: Resource {
-    func fetchLocations(result: @escaping (Result<[Episode], APIServiceError>) -> Void)
+    func fetchLocations(result: @escaping (Result<[LocationDetail], APIServiceError>) -> Void)
 }
 
 class LocationServiceImpl: LocationService {
     
-    func fetchLocations(result: @escaping (Result<[Episode], APIServiceError>) -> Void) {
+    func fetchLocations(result: @escaping (Result<[LocationDetail], APIServiceError>) -> Void) {
         call(request: Request(url: NSURL(string: "http://localhost:80/episodes.json")!), result: result)
     }
 }

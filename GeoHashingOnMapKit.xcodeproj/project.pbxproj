@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81E6A50E92C1B511880908F9 /* Pods_GeoHashingOnMapKit_GeoHashingOnMapKitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAE76BAD2E275D334EE870 /* Pods_GeoHashingOnMapKit_GeoHashingOnMapKitUITests.framework */; };
 		92B3F1CD231F91C000D042EB /* MarkerMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B3F1CC231F91C000D042EB /* MarkerMapViewModel.swift */; };
 		92B3F1CF231F964C00D042EB /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B3F1CE231F964C00D042EB /* Bindable.swift */; };
 		92B3F1D2231FF79700D042EB /* GeoHashing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B3F1D1231FF79700D042EB /* GeoHashing.swift */; };
+		92B3F1D42320F3D900D042EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92B3F1D32320F3D900D042EB /* GoogleService-Info.plist */; };
 		92B92639231E4631007EE26D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B92638231E4631007EE26D /* AppDelegate.swift */; };
 		92B9263B231E4631007EE26D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9263A231E4631007EE26D /* ViewController.swift */; };
 		92B9263E231E4631007EE26D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B9263C231E4631007EE26D /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 		92B92668231E4A99007EE26D /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B92667231E4A99007EE26D /* Resource.swift */; };
 		92B9266A231E6888007EE26D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B92669231E6888007EE26D /* Request.swift */; };
 		92B9266C231E87F4007EE26D /* ServiceCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9266B231E87F4007EE26D /* ServiceCore.swift */; };
+		99AC9E717CBCBBA7DA301A71 /* Pods_GeoHashingOnMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5EFF282734DB67B8915F386 /* Pods_GeoHashingOnMapKit.framework */; };
+		B93B2498128C1A71B3CEDA74 /* Pods_GeoHashingOnMapKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C96F673CD3C8DF9D9296CA8 /* Pods_GeoHashingOnMapKitTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +44,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E97221E05F4479274AD5C60 /* Pods-GeoHashingOnMapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoHashingOnMapKit.release.xcconfig"; path = "Target Support Files/Pods-GeoHashingOnMapKit/Pods-GeoHashingOnMapKit.release.xcconfig"; sourceTree = "<group>"; };
+		32E2DA2FD5D026C0DE737901 /* Pods-GeoHashingOnMapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoHashingOnMapKit.debug.xcconfig"; path = "Target Support Files/Pods-GeoHashingOnMapKit/Pods-GeoHashingOnMapKit.debug.xcconfig"; sourceTree = "<group>"; };
+		3AAC4F090064221B0C5B222F /* Pods-GeoHashingOnMapKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoHashingOnMapKitTests.debug.xcconfig"; path = "Target Support Files/Pods-GeoHashingOnMapKitTests/Pods-GeoHashingOnMapKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E556D777206398431F11352 /* Pods-GeoHashingOnMapKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoHashingOnMapKitTests.release.xcconfig"; path = "Target Support Files/Pods-GeoHashingOnMapKitTests/Pods-GeoHashingOnMapKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		6688A07AC0B866374AA82CEE /* Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests.debug.xcconfig"; path = "Target Support Files/Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests/Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		68FDEE53C7B6DD63CE5270D7 /* Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests.release.xcconfig"; path = "Target Support Files/Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests/Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7ACAE76BAD2E275D334EE870 /* Pods_GeoHashingOnMapKit_GeoHashingOnMapKitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoHashingOnMapKit_GeoHashingOnMapKitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C96F673CD3C8DF9D9296CA8 /* Pods_GeoHashingOnMapKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoHashingOnMapKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B3F1CC231F91C000D042EB /* MarkerMapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerMapViewModel.swift; sourceTree = "<group>"; };
 		92B3F1CE231F964C00D042EB /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		92B3F1D1231FF79700D042EB /* GeoHashing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoHashing.swift; sourceTree = "<group>"; };
+		92B3F1D32320F3D900D042EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92B92635231E4631007EE26D /* GeoHashingOnMapKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoHashingOnMapKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B92638231E4631007EE26D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92B9263A231E4631007EE26D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +72,7 @@
 		92B92667231E4A99007EE26D /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		92B92669231E6888007EE26D /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		92B9266B231E87F4007EE26D /* ServiceCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCore.swift; sourceTree = "<group>"; };
+		E5EFF282734DB67B8915F386 /* Pods_GeoHashingOnMapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoHashingOnMapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99AC9E717CBCBBA7DA301A71 /* Pods_GeoHashingOnMapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B93B2498128C1A71B3CEDA74 /* Pods_GeoHashingOnMapKitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +96,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E6A50E92C1B511880908F9 /* Pods_GeoHashingOnMapKit_GeoHashingOnMapKitUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C3E8AD4115E2279388E24C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32E2DA2FD5D026C0DE737901 /* Pods-GeoHashingOnMapKit.debug.xcconfig */,
+				2E97221E05F4479274AD5C60 /* Pods-GeoHashingOnMapKit.release.xcconfig */,
+				6688A07AC0B866374AA82CEE /* Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests.debug.xcconfig */,
+				68FDEE53C7B6DD63CE5270D7 /* Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests.release.xcconfig */,
+				3AAC4F090064221B0C5B222F /* Pods-GeoHashingOnMapKitTests.debug.xcconfig */,
+				4E556D777206398431F11352 /* Pods-GeoHashingOnMapKitTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		92B3F1D0231FF78A00D042EB /* GeoHash */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +131,8 @@
 				92B9264C231E4632007EE26D /* GeoHashingOnMapKitTests */,
 				92B92657231E4632007EE26D /* GeoHashingOnMapKitUITests */,
 				92B92636231E4631007EE26D /* Products */,
+				2C3E8AD4115E2279388E24C4 /* Pods */,
+				CB69D608BB3C33767C40AC9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +149,7 @@
 		92B92637231E4631007EE26D /* GeoHashingOnMapKit */ = {
 			isa = PBXGroup;
 			children = (
+				92B3F1D32320F3D900D042EB /* GoogleService-Info.plist */,
 				92B3F1D0231FF78A00D042EB /* GeoHash */,
 				92B92666231E4A17007EE26D /* Networking */,
 				92B92638231E4631007EE26D /* AppDelegate.swift */,
@@ -159,6 +192,16 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		CB69D608BB3C33767C40AC9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5EFF282734DB67B8915F386 /* Pods_GeoHashingOnMapKit.framework */,
+				7ACAE76BAD2E275D334EE870 /* Pods_GeoHashingOnMapKit_GeoHashingOnMapKitUITests.framework */,
+				7C96F673CD3C8DF9D9296CA8 /* Pods_GeoHashingOnMapKitTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,9 +209,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92B9265D231E4632007EE26D /* Build configuration list for PBXNativeTarget "GeoHashingOnMapKit" */;
 			buildPhases = (
+				DCB70D931503088679ADD4A2 /* [CP] Check Pods Manifest.lock */,
 				92B92631231E4631007EE26D /* Sources */,
 				92B92632231E4631007EE26D /* Frameworks */,
 				92B92633231E4631007EE26D /* Resources */,
+				2F654139F42B051E5FD5E968 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +228,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92B92660231E4632007EE26D /* Build configuration list for PBXNativeTarget "GeoHashingOnMapKitTests" */;
 			buildPhases = (
+				E3E3A7A9F6887A38EFEBB8B1 /* [CP] Check Pods Manifest.lock */,
 				92B92645231E4632007EE26D /* Sources */,
 				92B92646231E4632007EE26D /* Frameworks */,
 				92B92647231E4632007EE26D /* Resources */,
@@ -201,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92B92663231E4632007EE26D /* Build configuration list for PBXNativeTarget "GeoHashingOnMapKitUITests" */;
 			buildPhases = (
+				887791AEAF344FF03715A350 /* [CP] Check Pods Manifest.lock */,
 				92B92650231E4632007EE26D /* Sources */,
 				92B92651231E4632007EE26D /* Frameworks */,
 				92B92652231E4632007EE26D /* Resources */,
+				8CB6109330110F39FEE0E7BC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,6 +313,7 @@
 			files = (
 				92B92643231E4632007EE26D /* LaunchScreen.storyboard in Resources */,
 				92B92640231E4632007EE26D /* Assets.xcassets in Resources */,
+				92B3F1D42320F3D900D042EB /* GoogleService-Info.plist in Resources */,
 				92B9263E231E4631007EE26D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +333,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F654139F42B051E5FD5E968 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeoHashingOnMapKit/Pods-GeoHashingOnMapKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeoHashingOnMapKit/Pods-GeoHashingOnMapKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeoHashingOnMapKit/Pods-GeoHashingOnMapKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		887791AEAF344FF03715A350 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CB6109330110F39FEE0E7BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests/Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests/Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests/Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCB70D931503088679ADD4A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeoHashingOnMapKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3E3A7A9F6887A38EFEBB8B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeoHashingOnMapKitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		92B92631231E4631007EE26D /* Sources */ = {
@@ -470,6 +622,7 @@
 		};
 		92B9265E231E4632007EE26D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32E2DA2FD5D026C0DE737901 /* Pods-GeoHashingOnMapKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -488,6 +641,7 @@
 		};
 		92B9265F231E4632007EE26D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E97221E05F4479274AD5C60 /* Pods-GeoHashingOnMapKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -506,6 +660,7 @@
 		};
 		92B92661231E4632007EE26D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AAC4F090064221B0C5B222F /* Pods-GeoHashingOnMapKitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -527,6 +682,7 @@
 		};
 		92B92662231E4632007EE26D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E556D777206398431F11352 /* Pods-GeoHashingOnMapKitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -548,6 +704,7 @@
 		};
 		92B92664231E4632007EE26D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6688A07AC0B866374AA82CEE /* Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -568,6 +725,7 @@
 		};
 		92B92665231E4632007EE26D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68FDEE53C7B6DD63CE5270D7 /* Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
