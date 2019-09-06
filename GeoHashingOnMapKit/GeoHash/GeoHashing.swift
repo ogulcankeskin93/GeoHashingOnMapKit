@@ -30,14 +30,22 @@ final class GeoHashUtil {
         let geohashPrecision = queryBits / g_BITS_PER_CHAR
         let coordinates = boundingBoxCoordinates(center, radius)
         
-        let queries = coordinates.map {
+        var queries = coordinates.map {
             geoHashQuery( GFGeoHash(location: CLLocationCoordinate2D(latitude: $0[0], longitude: $0[1]), precision: UInt(geohashPrecision)), UInt(queryBits))
            
         }
+    
+        var res:[[String]] = [["0", "1"]]
+        queries.forEach { (p) -> () in
+            if !res.contains(where: { (arr) -> Bool in return (arr[0] == p[0] && arr[1] == p[1]) }) {
+                res.append(p)
+            }
+        }
         
-   
+        res.removeFirst()
         
-        return queries
+        return res
+        
         
     }
 
@@ -49,7 +57,7 @@ final class GeoHashUtil {
         guard let temp = geohash.geoHashValue else {return []}
         var hash = temp
         
-        var precision = ((Int(bits)-1)/g_BITS_PER_CHAR)+1
+        let precision = ((Int(bits)-1)/g_BITS_PER_CHAR)+1
         if (hash.count < precision) {
             return [hash, String(format: "%@~", hash)]
             
@@ -58,15 +66,15 @@ final class GeoHashUtil {
         hash = String(hash[..<index]) // "Stack"
         let index2: String.Index = hash.index(hash.startIndex, offsetBy: hash.count-1)
 
-        var base = String(hash[..<index2])
+        let base = String(hash[..<index2])
         
-        var lastValue = g_BASE32.index(of: String(hash.last!))
+        let lastValue = g_BASE32.index(of: String(hash.last!))
 
-        var significantBits = Int(bits) - (base.count * g_BITS_PER_CHAR);
-        var unusedBits = (g_BITS_PER_CHAR - significantBits);
+        let significantBits = Int(bits) - (base.count * g_BITS_PER_CHAR);
+        let unusedBits = (g_BITS_PER_CHAR - significantBits);
         // delete unused bits
-        var startValue = (lastValue ?? 0 >> unusedBits) << unusedBits;
-        var endValue = startValue + (1 << unusedBits);
+        let startValue = (lastValue ?? 0 >> unusedBits) << unusedBits;
+        let endValue = startValue + (1 << unusedBits);
         if (endValue >= g_BASE32.count) {
 //            console.warn("endValue > 31: endValue="+endValue+" < "+precision+" bits="+bits+" g_BITS_PER_CHAR="+g_BITS_PER_CHAR);
             return [base+g_BASE32[startValue], base+"~"];

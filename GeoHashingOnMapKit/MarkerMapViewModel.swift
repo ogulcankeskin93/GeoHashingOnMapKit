@@ -34,7 +34,7 @@ public class MarkerMapViewModel: NSObject {
     // MARK: - Properties
     public let coordinate: CLLocationCoordinate2D
     public let name: String
-    public let image: UIImage
+    public var image: UIImage
     public let distance: String
     
     // MARK: - Object Lifecycle
