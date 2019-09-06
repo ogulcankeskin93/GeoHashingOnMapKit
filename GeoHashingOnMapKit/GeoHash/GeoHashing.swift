@@ -64,17 +64,17 @@ final class GeoHashUtil {
         
         let lastValue = g_BASE32.index(of: String(hash.last!))
 
-        let significantBits = Int(bits) - (base.count * g_BITS_PER_CHAR);
-        let unusedBits = (g_BITS_PER_CHAR - significantBits);
+        let significantBits = Int(bits) - (base.count * g_BITS_PER_CHAR)
+        let unusedBits = (g_BITS_PER_CHAR - significantBits)
         // delete unused bits
-        let startValue = (lastValue ?? 0 >> unusedBits) << unusedBits;
-        let endValue = startValue + (1 << unusedBits);
+        let startValue = (lastValue ?? 0 >> unusedBits) << unusedBits
+        let endValue = startValue + (1 << unusedBits)
         if (endValue >= g_BASE32.count) {
 //            console.warn("endValue > 31: endValue="+endValue+" < "+precision+" bits="+bits+" g_BITS_PER_CHAR="+g_BITS_PER_CHAR);
-            return [base+g_BASE32[startValue], base+"~"];
+            return [base+g_BASE32[startValue], base+"~"]
         }
         else {
-            return [base+g_BASE32[startValue], base+g_BASE32[endValue]];
+            return [base+g_BASE32[startValue], base+g_BASE32[endValue]]
         }
     }
 //    private func geohashQuery(_ geohash: String, _ bits: Double){
@@ -131,19 +131,19 @@ final class GeoHashUtil {
 
         let longitudeRange: Range = -180..<181
 
-        var hash = "";
+        var hash = ""
         var hashVal = 0
         var bits = 0
         var even = false
 
         while (Double(hash.count) < precision) {
-            let val = even ? location.longitude : location.latitude;
-            var range = even ? longitudeRange : latitudeRange;
-            let mid: Double = Double((range.min()! + range.max()!) / 2);
+            let val = even ? location.longitude : location.latitude
+            var range = even ? longitudeRange : latitudeRange
+            let mid: Double = Double((range.min()! + range.max()!) / 2)
 
             /* jshint -W016 */
             if (val > mid) {
-                hashVal = (hashVal << 1) + 1;
+                hashVal = (hashVal << 1) + 1
                 range = Int(mid)..<range.max()! + 1
             }
             else {
@@ -152,12 +152,12 @@ final class GeoHashUtil {
             }
             /* jshint +W016 */
 
-            even = !even;
+            even = !even
             if (bits < 4) {
                 bits += 1
             }
             else {
-                bits = 0;
+                bits = 0
                 hash += g_BASE32[hashVal]
                 hashVal = 0
             }
@@ -167,9 +167,9 @@ final class GeoHashUtil {
     }
     
     private func boundingBoxBits(location: CLLocationCoordinate2D, size: Double) -> Int {
-        let latitudeDegreesDelta: Double = size/g_METERS_PER_DEGREE_LATITUDE;
-        let latitudeNorth: Double = fmin(90, location.latitude + latitudeDegreesDelta);
-        let latitudeSouth: Double = fmax(-90, location.latitude - latitudeDegreesDelta);
+        let latitudeDegreesDelta: Double = size/g_METERS_PER_DEGREE_LATITUDE
+        let latitudeNorth: Double = fmin(90, location.latitude + latitudeDegreesDelta)
+        let latitudeSouth: Double = fmax(-90, location.latitude - latitudeDegreesDelta)
         let bitsLatitude = max(0, floor(latitudeBitsForResolution(size)))*2
         let bitsNorth: Double = longitudeBitsForResolution(resolution: size, latitude: latitudeNorth)
         let bitsSouth: Double = longitudeBitsForResolution(resolution: size, latitude: latitudeSouth)
@@ -213,7 +213,7 @@ final class GeoHashUtil {
     }
 
     private func latitudeBitsForResolution(_ resolution: Double) -> Double {
-        return min(logTwo(x: Double(g_EARTH_MERI_CIRCUMFERENCE / 2) / resolution), g_MAXIMUM_BITS_PRECISION);
+        return min(logTwo(x: Double(g_EARTH_MERI_CIRCUMFERENCE / 2) / resolution), g_MAXIMUM_BITS_PRECISION)
 
     }
 
@@ -226,10 +226,10 @@ final class GeoHashUtil {
 
     private func metersToLongitudeDegrees(distance: Double, latitude: Double) -> Double {
         // DONE
-        let radians = degreesToRadians(degrees: latitude);
-        let num = cos(radians) * g_EARTH_EQ_RADIUS * .pi/180;
+        let radians = degreesToRadians(degrees: latitude)
+        let num = cos(radians) * g_EARTH_EQ_RADIUS * .pi/180
         let denom = 1 / sqrt(1 - g_E2 * sin(radians) * sin(radians))
-        let deltaDeg = num*denom;
+        let deltaDeg = num*denom
         if (deltaDeg  < g_EPSILON) {
             return distance > 0 ? 360 : 0
         }
@@ -242,41 +242,41 @@ final class GeoHashUtil {
     private func degreesToRadians(degrees: Double) -> Double {
 
 
-        return (degrees * .pi / 180);
+        return (degrees * .pi / 180)
     }
     // Default geohash length
-    private var g_GEOHASH_PRECISION: Double = 10;
+    private var g_GEOHASH_PRECISION: Double = 10
 
     // Characters used in location geohashes
-    private var g_BASE32 = ["0","1","2","3","4","5","6","7","8","9","b","c","d","e","f","g","h","j","k","m","n","p","q","r","s","t","u","v","w","x","y","z"];
+    private var g_BASE32 = ["0","1","2","3","4","5","6","7","8","9","b","c","d","e","f","g","h","j","k","m","n","p","q","r","s","t","u","v","w","x","y","z"]
 
     // The meridional circumference of the earth in meters
-    private var g_EARTH_MERI_CIRCUMFERENCE: Double = 40007860;
+    private var g_EARTH_MERI_CIRCUMFERENCE: Double = 40007860
 
     // Length of a degree latitude at the equator
-    private var g_METERS_PER_DEGREE_LATITUDE: Double = 110574;
+    private var g_METERS_PER_DEGREE_LATITUDE: Double = 110574
 
     // Number of bits per geohash character
-    private var g_BITS_PER_CHAR = 5;
+    private var g_BITS_PER_CHAR = 5
     
     // Maximum length of a geohash in bits
-    private lazy var g_MAXIMUM_BITS_PRECISION: Double = Double(22 * g_BITS_PER_CHAR);
+    private lazy var g_MAXIMUM_BITS_PRECISION: Double = Double(22 * g_BITS_PER_CHAR)
 
     // Equatorial radius of the earth in meters
-    private var g_EARTH_EQ_RADIUS: Double = 6378137;
+    private var g_EARTH_EQ_RADIUS: Double = 6378137
 
     // The following value assumes a polar radius of
     // var g_EARTH_POL_RADIUS = 6356752.3;
     // The formulate to calculate g_E2 is
     // g_E2 == (g_EARTH_EQ_RADIUS^2-g_EARTH_POL_RADIUS^2)/(g_EARTH_EQ_RADIUS^2)
     // The exact value is used here to avoid rounding errors
-    private var g_E2: Double = 0.00669447819799;
+    private var g_E2: Double = 0.00669447819799
 
     // Cutoff for rounding errors on double calculations
-    private var g_EPSILON: Double = 1e-12;
+    private var g_EPSILON: Double = 1e-12
 
     private func logTwo(x: Double) -> Double {
-        return log(x) / log(2);
+        return log(x) / log(2)
     }
 }
 
