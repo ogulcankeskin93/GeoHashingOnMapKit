@@ -4,6 +4,7 @@
 *.lock
 *~.nib
 DerivedData/
+GoogleService-Info.plist
 build/
 *.pbxuser
 *.mode1v3
