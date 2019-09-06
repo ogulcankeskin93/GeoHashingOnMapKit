@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		81E6A50E92C1B511880908F9 /* Pods_GeoHashingOnMapKit_GeoHashingOnMapKitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAE76BAD2E275D334EE870 /* Pods_GeoHashingOnMapKit_GeoHashingOnMapKitUITests.framework */; };
+		926B1AC12322F33900424581 /* DispatchGroupUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B1AC02322F33900424581 /* DispatchGroupUtil.swift */; };
 		92B3F1CD231F91C000D042EB /* MarkerMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B3F1CC231F91C000D042EB /* MarkerMapViewModel.swift */; };
 		92B3F1CF231F964C00D042EB /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B3F1CE231F964C00D042EB /* Bindable.swift */; };
 		92B3F1D2231FF79700D042EB /* GeoHashing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B3F1D1231FF79700D042EB /* GeoHashing.swift */; };
 		92B3F1D42320F3D900D042EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92B3F1D32320F3D900D042EB /* GoogleService-Info.plist */; };
 		92B3F1D6232278FA00D042EB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B3F1D5232278FA00D042EB /* ViewModel.swift */; };
-		92B3F1D92322792F00D042EB /* MotherLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B3F1D82322792F00D042EB /* MotherLocation.swift */; };
+		92B3F1D92322792F00D042EB /* LocationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B3F1D82322792F00D042EB /* LocationDetail.swift */; };
 		92B92639231E4631007EE26D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B92638231E4631007EE26D /* AppDelegate.swift */; };
 		92B9263B231E4631007EE26D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9263A231E4631007EE26D /* ViewController.swift */; };
 		92B9263E231E4631007EE26D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B9263C231E4631007EE26D /* Main.storyboard */; };
@@ -21,9 +22,6 @@
 		92B92643231E4632007EE26D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B92641231E4632007EE26D /* LaunchScreen.storyboard */; };
 		92B9264E231E4632007EE26D /* GeoHashingOnMapKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9264D231E4632007EE26D /* GeoHashingOnMapKitTests.swift */; };
 		92B92659231E4632007EE26D /* GeoHashingOnMapKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B92658231E4632007EE26D /* GeoHashingOnMapKitUITests.swift */; };
-		92B92668231E4A99007EE26D /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B92667231E4A99007EE26D /* Resource.swift */; };
-		92B9266A231E6888007EE26D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B92669231E6888007EE26D /* Request.swift */; };
-		92B9266C231E87F4007EE26D /* ServiceCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9266B231E87F4007EE26D /* ServiceCore.swift */; };
 		99AC9E717CBCBBA7DA301A71 /* Pods_GeoHashingOnMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5EFF282734DB67B8915F386 /* Pods_GeoHashingOnMapKit.framework */; };
 		B93B2498128C1A71B3CEDA74 /* Pods_GeoHashingOnMapKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C96F673CD3C8DF9D9296CA8 /* Pods_GeoHashingOnMapKitTests.framework */; };
 /* End PBXBuildFile section */
@@ -54,12 +52,13 @@
 		68FDEE53C7B6DD63CE5270D7 /* Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests.release.xcconfig"; path = "Target Support Files/Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests/Pods-GeoHashingOnMapKit-GeoHashingOnMapKitUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7ACAE76BAD2E275D334EE870 /* Pods_GeoHashingOnMapKit_GeoHashingOnMapKitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoHashingOnMapKit_GeoHashingOnMapKitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C96F673CD3C8DF9D9296CA8 /* Pods_GeoHashingOnMapKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoHashingOnMapKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		926B1AC02322F33900424581 /* DispatchGroupUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchGroupUtil.swift; sourceTree = "<group>"; };
 		92B3F1CC231F91C000D042EB /* MarkerMapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerMapViewModel.swift; sourceTree = "<group>"; };
 		92B3F1CE231F964C00D042EB /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		92B3F1D1231FF79700D042EB /* GeoHashing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoHashing.swift; sourceTree = "<group>"; };
 		92B3F1D32320F3D900D042EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92B3F1D5232278FA00D042EB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		92B3F1D82322792F00D042EB /* MotherLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherLocation.swift; sourceTree = "<group>"; };
+		92B3F1D82322792F00D042EB /* LocationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetail.swift; sourceTree = "<group>"; };
 		92B92635231E4631007EE26D /* GeoHashingOnMapKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoHashingOnMapKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B92638231E4631007EE26D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92B9263A231E4631007EE26D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,9 +72,6 @@
 		92B92654231E4632007EE26D /* GeoHashingOnMapKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoHashingOnMapKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B92658231E4632007EE26D /* GeoHashingOnMapKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoHashingOnMapKitUITests.swift; sourceTree = "<group>"; };
 		92B9265A231E4632007EE26D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92B92667231E4A99007EE26D /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		92B92669231E6888007EE26D /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		92B9266B231E87F4007EE26D /* ServiceCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCore.swift; sourceTree = "<group>"; };
 		E5EFF282734DB67B8915F386 /* Pods_GeoHashingOnMapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoHashingOnMapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,6 +116,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		926B1AC22322F65000424581 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				926B1AC02322F33900424581 /* DispatchGroupUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		92B3F1D0231FF78A00D042EB /* GeoHash */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +135,7 @@
 		92B3F1D72322792200D042EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92B3F1D82322792F00D042EB /* MotherLocation.swift */,
+				92B3F1D82322792F00D042EB /* LocationDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,8 +167,8 @@
 			children = (
 				92B3F1D72322792200D042EB /* Model */,
 				92B3F1D32320F3D900D042EB /* GoogleService-Info.plist */,
+				926B1AC22322F65000424581 /* Util */,
 				92B3F1D0231FF78A00D042EB /* GeoHash */,
-				92B92666231E4A17007EE26D /* Networking */,
 				92B92638231E4631007EE26D /* AppDelegate.swift */,
 				92B9263A231E4631007EE26D /* ViewController.swift */,
 				92B3F1D5232278FA00D042EB /* ViewModel.swift */,
@@ -194,16 +198,6 @@
 				92B9265A231E4632007EE26D /* Info.plist */,
 			);
 			path = GeoHashingOnMapKitUITests;
-			sourceTree = "<group>";
-		};
-		92B92666231E4A17007EE26D /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				92B92667231E4A99007EE26D /* Resource.swift */,
-				92B92669231E6888007EE26D /* Request.swift */,
-				92B9266B231E87F4007EE26D /* ServiceCore.swift */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		CB69D608BB3C33767C40AC9E /* Frameworks */ = {
@@ -457,14 +451,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				92B3F1D2231FF79700D042EB /* GeoHashing.swift in Sources */,
+				926B1AC12322F33900424581 /* DispatchGroupUtil.swift in Sources */,
 				92B3F1D6232278FA00D042EB /* ViewModel.swift in Sources */,
 				92B9263B231E4631007EE26D /* ViewController.swift in Sources */,
 				92B3F1CF231F964C00D042EB /* Bindable.swift in Sources */,
-				92B9266A231E6888007EE26D /* Request.swift in Sources */,
-				92B92668231E4A99007EE26D /* Resource.swift in Sources */,
 				92B92639231E4631007EE26D /* AppDelegate.swift in Sources */,
-				92B3F1D92322792F00D042EB /* MotherLocation.swift in Sources */,
-				92B9266C231E87F4007EE26D /* ServiceCore.swift in Sources */,
+				92B3F1D92322792F00D042EB /* LocationDetail.swift in Sources */,
 				92B3F1CD231F91C000D042EB /* MarkerMapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

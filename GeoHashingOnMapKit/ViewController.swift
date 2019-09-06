@@ -59,7 +59,6 @@ class ViewController: UIViewController {
                 if let currentLocation = currentLocation {
                     viewModel.calculateGeoHash(coordinate: currentLocation.coordinate, distance: sliderValue)
                 }
-            //                addAnnotations()
             default:
                 break
             }
@@ -158,19 +157,30 @@ extension ViewController: MKMapViewDelegate {
             annotions.forEach {
                 if let model = $0 as? MarkerMapViewModel {
                     if viewModel.control(title: model.name) {
-                        model.image = UIImage(named: "great")!
+                        if model.inRange ?? false {
+                            
+                        } else {
+                            model.inRange = true
+                            mapView.removeAnnotation($0)
+                            mapView.addAnnotation(model)
+                        }
+                        
+                    } else {
+                        if model.inRange ?? false {
+                            model.inRange = false
+                            mapView.removeAnnotation($0)
+                            mapView.addAnnotation(model)
+                        }
                     }
                 }
             }
         }
-        
-        
     }
 }
-    
-    
-    extension String {
-        func toDouble() -> Double? {
-            return NumberFormatter().number(from: self)?.doubleValue
-        }
+
+
+extension String {
+    func toDouble() -> Double? {
+        return NumberFormatter().number(from: self)?.doubleValue
+    }
 }

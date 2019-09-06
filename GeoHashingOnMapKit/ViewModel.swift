@@ -10,8 +10,6 @@ import Foundation
 import GeoFire
 import Firebase
 
-
-
 protocol ViewModelReachable {
     
     func fetchLocations()
@@ -21,9 +19,6 @@ protocol ViewModelReachable {
     var control: Bindable<Bool> {get set}
 
 }
-
-
-
 
 class ViewModel: ViewModelReachable {
     var control: Bindable<Bool> = Bindable(false)
@@ -35,10 +30,12 @@ class ViewModel: ViewModelReachable {
     
     private var inrangeArr: [LocationDetail] = [] {
         didSet {
+            inrangeArr.forEach {
+                print("\($0.title)--\($0.distance ?? 0)")
+            }
             control.value = true
         }
     }
-    let locationService = LocationServiceImpl()
     var model: Bindable<[LocationDetail]> = Bindable([])
     
     func fetchLocations() {
@@ -54,26 +51,9 @@ class ViewModel: ViewModelReachable {
             }
         }
     }
-    private func fetchLocationsWithWebService() {
-        
-        _ = locationService.fetchLocations() { result in
-            switch result {
-            case .success(let result):
-                self.model.value = result
-            //                self.createDatas(mother)
-            case .failure(let err):
-                print(err)
-            }
-            
-        }
-    }
+
     
-    private func createDatas(_ arr: [LocationDetail]) {
-        
-        arr.forEach { Firestore.firestore().document("locations/location\($0.longitude)\($0.title)").setData($0.dictionary)
-        }
-        
-    }
+  
     
     private func returnGeoHash(latitude: String?, longitude: String?) -> String {
         let long: Double = longitude?.toDouble() ?? 0
@@ -88,7 +68,7 @@ class ViewModel: ViewModelReachable {
         // ~1 mile of lat and lon in degrees
         
         let current = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        let queries = GeoHashUtil.shared.getQueriesForDocumentsAround(center: Center(latitude: coordinate.latitude, longitude: coordinate.longitude), radius: distance * 1000)
+        let queries = GeoHashUtil.shared.getQueriesForDocumentsAround(center: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude), radius: distance * 1000)
         let ref = Firestore.firestore().collection("locations")
         
         let snaps = queries.map { location in
@@ -96,8 +76,17 @@ class ViewModel: ViewModelReachable {
             
         }
         
+        var temp: [LocationDetail] = []
+        
+        
+        DispatchGroupUtil.setup(dispatchKey: "calculateGeoHash", snaps.count) { [weak self] in
+            // Runs when all queries ended up.
+            self?.inrangeArr = temp
+            
+        }
         snaps.forEach {
             $0.getDocuments(completion: { (snapshot, err) in
+                
                 if let error = err {
                     print("Error getting documents: \(error)")
                 } else {
@@ -111,13 +100,11 @@ class ViewModel: ViewModelReachable {
                         guard distance >= km.value else {return nil}
                         return detail
                     }
-                    self.inrangeArr = model
-                    
+                    temp.append(contentsOf: model)
+                    DispatchGroupUtil.leave(dispatchKey: "calculateGeoHash")
                 }
             })
-        } 
-        
-        
+        }
         
     }
     

@@ -1,5 +1,4 @@
 
-
 import Foundation
 
 class Bindable<T> {

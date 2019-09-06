@@ -9,10 +9,6 @@
 import Foundation
 import GeoFire
 
-struct Center {
-    let latitude: Double
-    let longitude: Double
-}
 
 final class GeoHashUtil {
 
@@ -24,17 +20,18 @@ final class GeoHashUtil {
     }
 
 
-    func getQueriesForDocumentsAround(center: Center, radius: Double = 10 * 1000) -> [[String]]{
+    func getQueriesForDocumentsAround(center: CLLocationCoordinate2D, radius: Double) -> [[String]]{
         
         let queryBits = max(1, boundingBoxBits(location: center, size: radius))
         let geohashPrecision = queryBits / g_BITS_PER_CHAR
         let coordinates = boundingBoxCoordinates(center, radius)
         
-        var queries = coordinates.map {
+        let queries = coordinates.map {
             geoHashQuery( GFGeoHash(location: CLLocationCoordinate2D(latitude: $0[0], longitude: $0[1]), precision: UInt(geohashPrecision)), UInt(queryBits))
            
         }
     
+        // Remove Duplicates
         var res:[[String]] = [["0", "1"]]
         queries.forEach { (p) -> () in
             if !res.contains(where: { (arr) -> Bool in return (arr[0] == p[0] && arr[1] == p[1]) }) {
@@ -48,10 +45,7 @@ final class GeoHashUtil {
         
         
     }
-
-   
     
-    //
     private func geoHashQuery(_ geohash: GFGeoHash, _ bits: UInt) -> [String] {
         
         guard let temp = geohash.geoHashValue else {return []}
@@ -113,7 +107,7 @@ final class GeoHashUtil {
 //        }
 //    }
 
-    private func encodeGeohash(_ location: Center, _ precision: Double) -> String {
+    private func encodeGeohash(_ location: CLLocationCoordinate2D, _ precision: Double) -> String {
         //    validateLocation(location);
         //    if (typeof precision !== "undefined") {
         //    if (typeof precision !== "number" || isNaN(precision)) {
@@ -133,9 +127,9 @@ final class GeoHashUtil {
         // Use the global precision default if no precision is specified
         //    precision = precision || g_GEOHASH_PRECISION;
 
-        var latitudeRange: Range = -90..<91
+        let latitudeRange: Range = -90..<91
 
-        var longitudeRange: Range = -180..<181
+        let longitudeRange: Range = -180..<181
 
         var hash = "";
         var hashVal = 0
@@ -143,9 +137,9 @@ final class GeoHashUtil {
         var even = false
 
         while (Double(hash.count) < precision) {
-            var val = even ? location.longitude : location.latitude;
+            let val = even ? location.longitude : location.latitude;
             var range = even ? longitudeRange : latitudeRange;
-            var mid: Double = Double((range.min()! + range.max()!) / 2);
+            let mid: Double = Double((range.min()! + range.max()!) / 2);
 
             /* jshint -W016 */
             if (val > mid) {
@@ -171,17 +165,8 @@ final class GeoHashUtil {
 
         return hash
     }
-//    private func boundingBoxBitsOld(coordinate: Center, size: Double) -> Double {
-//        let latDeltaDegrees = size / g_METERS_PER_DEGREE_LATITUDE;
-//        let latitudeNorth = fmin(90, coordinate.latitude + latDeltaDegrees);
-//        let latitudeSouth = fmax(-90, coordinate.latitude - latDeltaDegrees);
-//        let bitsLat = floor(latitudeBitsForResolution(size))*2;
-//        let bitsLongNorth: UInt = floor(longitudeBitsForResolution(resolution: size, latitude: latitudeNorth))*2-1;
-//        let bitsLongSouth = floor(longitudeBitsForResolution(resolution: size, latitude: latitudeSouth))*2-1;
-//        return min(bitsLat, bitsLongNorth, bitsLongSouth, g_MAXIMUM_BITS_PRECISION);
-//    }
     
-    private func boundingBoxBits(location: Center, size: Double) -> Int {
+    private func boundingBoxBits(location: CLLocationCoordinate2D, size: Double) -> Int {
         let latitudeDegreesDelta: Double = size/g_METERS_PER_DEGREE_LATITUDE;
         let latitudeNorth: Double = fmin(90, location.latitude + latitudeDegreesDelta);
         let latitudeSouth: Double = fmax(-90, location.latitude - latitudeDegreesDelta);
@@ -195,7 +180,7 @@ final class GeoHashUtil {
     }
     
 
-    private func boundingBoxCoordinates(_ center: Center, _ radius: Double) -> [[Double]] {
+    private func boundingBoxCoordinates(_ center: CLLocationCoordinate2D, _ radius: Double) -> [[Double]] {
         let latDegrees = radius / g_METERS_PER_DEGREE_LATITUDE;
         let latitudeNorth = fmin(90, center.latitude + latDegrees);
         let latitudeSouth = fmax(-90, center.latitude - latDegrees);
@@ -295,17 +280,3 @@ final class GeoHashUtil {
     }
 }
 
-
-extension String {
-    subscript (bounds: CountableClosedRange<Int>) -> String {
-        let start = index(startIndex, offsetBy: bounds.lowerBound)
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return String(self[start...end])
-    }
-
-    subscript (bounds: CountableRange<Int>) -> String {
-        let start = index(startIndex, offsetBy: bounds.lowerBound)
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return String(self[start..<end])
-    }
-}
